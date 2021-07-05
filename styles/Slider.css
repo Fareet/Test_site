@@ -1,0 +1,117 @@
+.slider{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.slide{
+    max-width: 1920px;
+    height: 870px;
+    background:
+    url(/img/stars.svg) no-repeat right center ,
+    url(/img/Origami-Home.svg) no-repeat right bottom ,
+    linear-gradient(79.74deg, rgba(22, 74, 168, 0.9) -5.98%, rgba(10, 124, 221, 0.9) 114.25%);
+    overflow: hidden;
+}
+.slide__info-block{
+    width: 700px;
+    padding: 200px 0px 0px 200px;
+}
+.slide__info-block h1{
+    color:white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    margin-bottom: 0%;
+}
+.slide__info-block h2{
+    margin-top: 0%;
+    color:white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+}
+.slide__icons{
+    position: absolute;
+    max-width: 100%;
+}
+
+.info-block__description{
+    width: 650px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.info-block_detailed{
+    margin-top: 30px;
+    display: inline-block;
+    width: 215px;
+    background: #00B8FF;
+    border-radius: 4px;
+    text-decoration: none;
+    color:white;
+    padding: 15px 0px;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+}
+@media(max-width:1900px){
+    .slide{
+        background:
+        url(/img/stars.svg) no-repeat ,
+        url(/img/Origami-Home2.svg) no-repeat right bottom,
+        linear-gradient(79.74deg, rgba(22, 74, 168, 0.9) -5.98%, rgba(10, 124, 221, 0.9) 114.25%);
+    }
+}
+@media(max-width:1500px){
+    .slide__info-block{
+        padding: 100px 0px 0px 200px;
+    }
+}
+@media(max-width:1023px){
+    .slide__info-block{
+        padding: 100px 0px 0px 30px;
+    }
+    .slide__info-block h1{
+        font-size: 50px;
+        margin-bottom: 0%;
+    }
+    .slide__info-block h2{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .info-block__description{
+        width: 500px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+@media(max-width:767px){
+    .slide__info-block{
+        width: 100%;
+        }
+    .slide__info-block h1{
+        font-size:25px;
+        margin-bottom: 0%;
+    }
+    .slide__info-block h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .info-block__description{
+        width: 70%;
+        font-size: 14px;
+        line-height: 24px;
+        line-height: 1.3em;
+    }
+    .slide{
+        background:
+        url(/img/stars.svg) no-repeat ,
+        url(/img/Origami-Home3.svg) no-repeat right bottom,
+        linear-gradient(79.74deg, rgba(22, 74, 168, 0.9) -5.98%, rgba(10, 124, 221, 0.9) 114.25%);
+    }
+}

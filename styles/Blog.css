@@ -1,0 +1,148 @@
+.blog{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.blog__news{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog__main-block{
+    padding: 20px 0px 70px 150px;
+}
+.news__block{
+    width: calc(30% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.block__image-block{
+    margin-bottom: auto;
+    background-size: cover;
+    width: 100%;
+    height: 234px;
+}
+.image-block_image img{
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+.blog__news_date-blog{
+    margin: 0%;
+    padding: 0%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7C7C7;
+}
+.block__content_info{
+    margin-bottom: auto;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.news__block_content{
+    margin-bottom: auto;
+    width: calc(90%);
+}
+.blog__news_B2B-Blog{
+    margin: 0%;
+    padding: 0%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #00AEEF;
+    text-decoration: none;
+}
+.blog__news_blog-header{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2D3448;
+    text-decoration: none;
+    font-weight: bolder;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+}
+.blog__news_content-news{
+    color: #6B6B6B;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 3.9em;
+}
+.news__block:nth-child(1) .block__image-block{
+    background-image: url(/img/CapsLockDay.jpg);
+}
+.news__block:nth-child(2) .block__image-block{
+    background-image: url(/img/B2BBaner.jpg);
+}
+.news__block:nth-child(3) .block__image-block{
+    background-image: url(/img/Spreadsheet.jpg);
+}
+@media(max-width:1600px){
+    .blog__main-block{
+        padding: 20px 30px 70px 50px;
+    }
+}
+@media(max-width:1500px){
+    .news__block{
+        width: calc(50% - 30px);
+    }
+    .news__block:nth-child(3){
+    display: none;
+    }
+}
+@media(max-width:1023px){
+    .blog__main-block{
+        padding: 20px 0px 70px 20px;
+     }
+    .blog__news_date-blog{
+        display:none;
+    }
+    .block__image-block{
+
+        height: 190px;
+    }
+    .blog__news_blog-header{
+        font-size: 16px;
+    }
+    .blog__news_content-news{
+        font-size: 14px;
+    }
+}
+@media(max-width:767px){
+    .news__block{
+        width: calc(100% - 30px);
+    }
+    .news__block:nth-child(2){
+        display: none;
+    }
+    .block__image-block{
+
+        height: 140px;
+    }
+}
+@media(max-width:320px){
+    .news__block{
+        width: calc(50% - 5px);
+    }
+    .news__block:nth-child(2){
+        display: flex;
+    }
+}
