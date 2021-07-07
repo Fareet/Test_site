@@ -9,64 +9,66 @@
 	</head>
 	<body>
 		<header class = 'header'>
-			<div class =header__menu>
-				<a href="#">
-					<svg class =menu__menu-button><use xlink:href="sprite.svg#menu"></use></svg>
-				</a>
-			</div>
-			<div class =header__logo>
-				<a href="#"><svg class="logo__image"><use xlink:href="sprite.svg#logo"></use></svg></a>
-			</div>
-			<div class =header__lang>
-				<select class ="select_lang">
-					<option class =rus>Русский</option>
-					<option class =bel>Белорусский</option>
-				</select>
-			</div>
-			<div class =header__call>
-				<select class ="call__phones">
-					<option class =call__phones_phone>+7 (495) 278-08-54</option>
-					<option class =call__phones_phone>+7 (812) 670-07-40</option>
-				</select>
-				<a class ='call_back-call' href="#">Заказать обратный звонок</a>
-			</div>
-			<div class =header__massage>
-				<a class='massage_send-massage' href='#'>Написать письмо</a>
-			</div>
-			<div class=header__links>
-				<div class='links-block'>
-					<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#support"></use></svg></a>
+			<div class = header-main-menu>
+				<div class =header__menu>
+					<a href="#">
+						<svg class =menu__menu-button><use xlink:href="sprite.svg#menu"></use></svg>
+					</a>
 				</div>
-				<div class='links-block'>
-					<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#buys"></use></svg></a>
+				<div class =header__logo>
+					<svg class="logo__image"><use xlink:href="sprite.svg#logo"></use></svg>
 				</div>
-				<div class='links-block'>
-					<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#profile"></use></svg></a>
+				<div class =header__lang>
+					<select class ="select_lang">
+						<option class =rus>Русский</option>
+						<option class =bel>Белорусский</option>
+					</select>
+				</div>
+				<div class =header__call>
+					<select class ="call__phones">
+						<option class =call__phones_phone>+7 (495) 278-08-54</option>
+						<option class =call__phones_phone>+7 (812) 670-07-40</option>
+					</select>
+					<a class ='call_back-call' href="#">Заказать обратный звонок</a>
+				</div>
+				<div class =header__massage>
+					<a class='massage_send-massage' href='#'>Написать письмо</a>
+				</div>
+				<div class=header__links>
+					<div class='links-block'>
+						<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#support"></use></svg></a>
+					</div>
+					<div class='links-block'>
+						<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#buys"></use></svg></a>
+					</div>
+					<div class='links-block'>
+						<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#profile"></use></svg></a>
+					</div>
 				</div>
 			</div>
 		</header>
 		<main>
 			<section class="slider">
-				<div class='slide'>
-					<div class="slide__info-block">
-						<div class = 'info-block__icon'>
-							<img src="/img/Origami.svg" alt="">
+				<div class ='slider-main-block'>
+					<div class="slide1">
+						<div class="slide__info-block">
+							<div class = 'info-block__icon'>
+								<img src="/img/Origami.svg" alt="">
+							</div>
+							<h1>Сотбит: Оригами</h1>
+							<h2>Интернет-магазин</h2>
+							<div class=info-block__description>
+								Платформа помогает менеджерам отдела продаж в B2B сегменте и их руководителям эффективнее работать со своими клиентами в онлайне через личный кабинет
+							</div>
+							<a class='info-block_detailed' href="#">Подробнее   <img src="/img/arrow.svg" alt=""></a>
 						</div>
-						<h1>Сотбит: Оригами</h1>
-						<h2>Интернет-магазин</h2>
-						<div class=info-block__description>
-							Платформа помогает менеджерам отдела продаж в B2B сегменте и их руководителям эффективнее работать со своими клиентами в онлайне через личный кабинет
-						</div>
-						<a class='info-block_detailed' href="#">Подробнее   <img src="/img/arrow.svg" alt=""></a>
 					</div>
 				</div>
 			</section>
 			<section class="services">
 				<div class="services_main-block">
 					<div class= section_header>
-						<div>
 							<h2 class='block_title'>Наши Услуги</h2>
-						</div>
 					</div>
 					<div class ='services__block'>
 						<a href="#">
@@ -139,14 +141,10 @@
 			<section class="our-products">
 				<div class=our-products__main-block>
 					<div class= section_header>
-						<div>
-							<h2 class='block_title'>Наши продукты</h2>
-						</div>
-						<div class ='see-all-block'>
-							<a class ="see_all" href="#">Все продукты
+						<h2 class='block_title'>Наши продукты</h2>
+						<a class ="see_all" href="#">Все продукты
 								<img src='/img/arrow2.svg' alt="">
-							</a>
-						</div>
+						</a>
 					</div>
 					<div class ='our-products__block'>
 						<a href=#>
@@ -220,14 +218,10 @@
 			<section class="cases">
 				<div class='cases__main-block'>
 					<div class= section_header>
-						<div>
-							<h2 class='block_title'>Кейсы</h2>
-						</div>
-						<div class ='see-all-block'>
-							<a class ="see_all" href="#">Все кейсы
-								<img src='/img/arrow2.svg' alt="">
-							</a>
-						</div>
+						<h2 class='block_title'>Кейсы</h2>
+						<a class ="see_all" href="#">Все кейсы
+							<img src='/img/arrow2.svg' alt="">
+						</a>
 					</div>
 					<div class='selects'>
 						<ul>
@@ -388,14 +382,10 @@
 			<section class="blog">
 				<div class="blog__main-block">
 					<div class= "section_header">
-						<div>
-							<h2 class='block_title'>Блог</h2>
-						</div>
-						<div class = see-all-block>
-							<a class ="see_all" href="#">Все новости
-								<img src='/img/arrow2.svg' alt="">
-							</a>
-						</div>
+						<h2 class='block_title'>Блог</h2>
+						<a class ="see_all" href="#">Все новости
+							<img src='/img/arrow2.svg' alt="">
+						</a>
 					</div>
 					<div class="blog__news">
 						<div class='news__block'>
@@ -443,92 +433,96 @@
 				</div>
 			</section>
 			<section class="How-start">
-				<img src="/img/Sotbitlogo.svg" alt="">
-				<div class='How-start__block'>
-					<span class="How-start__block_header">Не знаете, с чего начать?</span>
-					<span class="How-start__block_content">Заполните форму ниже и мы свяжемся с Вами!</span>
-					<span class="How-start__block_button">
-						<a href='#'>Оставить заявку</a>
-					</span>
+				<div class= 'How-start-menu'>
+					<img src="/img/Sotbitlogo.svg" alt="">
+					<div class='How-start__block'>
+						<span class="How-start__block_header">Не знаете, с чего начать?</span>
+						<span class="How-start__block_content">Заполните форму ниже и мы свяжемся с Вами!</span>
+						<span class="How-start__block_button">
+							<a href='#'>Оставить заявку</a>
+						</span>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer-content">
-				<div class='content-container'>
-					<div class='footer__logo'>
-						<img src ='/img/sotbitLogo2.svg' alt="">
-					</div>
-				</div>
-				<div class='content-container'>
-					<div class='footer__about-us'>
-						<h4 class ='footer_titles'>О нас</h4>
-						<ul>
-							<li><a href="#">Портфолио</a></li>
-							<li><a href="#">MarketPlace</a></li>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Вакансии</a></li>
-							<li><a href="#">Партнерская программа</a></li>
-							<li><a href="#">Идея!</a></li>
-							<li><a href="#">Оставить претензию</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class='content-container'>
-					<div class='footer__contacts'>
-						<h4 class ='footer_titles'>Контакты</h4>
-						<div class ='footer__contacts__phones'>
-							<a href=#>+7 (495) 278-08-54</a>
-							<p>Москва</p>
-							<a href=#>+7 (812) 670-07-40</a>
-							<p>Санкт-Петербург</p>
-						</div>
-						<div class = 'footer__contacts__socialSites'>
-							<svg class='social'>
-								<a href="#"><use xlink:href="sprite.svg#vk"></use></a>
-							</svg>
-							<svg class='social'>
-								<a href="#"><use xlink:href="sprite.svg#instagram"></use></a>
-							</svg>
-							<svg class='social'>
-								<a href="#"><use xlink:href="sprite.svg#facebook"></use></a>
-							</svg>
-							<svg class='social'>
-								<a href="#"><use xlink:href="sprite.svg#telegram"></use></a>
-							</svg>
-							<svg class='social'>
-								<a href="#"><use xlink:href="sprite.svg#youtube"></use></a>
-							</svg>
-							<svg class='social'>
-								<a href="#"><use xlink:href="sprite.svg#inn"></use></a>
-							</svg>
+			<div class="footer-main-block">
+				<div class="footer-content">
+					<div class='content-container'>
+						<div class='footer__logo'>
+							<img src ='/img/sotbitLogo2.svg' alt="">
 						</div>
 					</div>
-				</div>
-				<div class='content-container'>
-					<h4 class ='footer_titles'>Подписаться</h4>
-					<div class='footer__subscribe'>
-						<form class = 'footer__subscribe__Email-subscribe'>
-							<input type="email" placeholder="Email" required>
-							<button type="button"><svg><use xlink:href="sprite.svg#Email"></use></svg></button>
-						</form>
-						<div class = 'footer__subscribe__certificate'>
-							<div class='footer__subscribe__certificate-text'>
-								<p>Являемся золотым сертифицированным партнером компании “1С-Битрикс”</p>
+					<div class='content-container'>
+						<div class='footer__about-us'>
+							<h4 class ='footer_titles'>О нас</h4>
+							<ul>
+								<li><a href="#">Портфолио</a></li>
+								<li><a href="#">MarketPlace</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Партнерская программа</a></li>
+								<li><a href="#">Идея!</a></li>
+								<li><a href="#">Оставить претензию</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class='content-container'>
+						<div class='footer__contacts'>
+							<h4 class ='footer_titles'>Контакты</h4>
+							<div class ='footer__contacts__phones'>
+								<a href=#>+7 (495) 278-08-54</a>
+								<p>Москва</p>
+								<a href=#>+7 (812) 670-07-40</a>
+								<p>Санкт-Петербург</p>
 							</div>
-							<div class="footer__subscribe__certificate-image">
-								<a href='#' class ='image_link'>
-									<img src = "/img/sotbit_about_us_bitrix_gold1.svg" alt="">
-								</a>
+							<div class = 'footer__contacts__socialSites'>
+								<svg class='social'>
+									<a href="#"><use xlink:href="sprite.svg#vk"></use></a>
+								</svg>
+								<svg class='social'>
+									<a href="#"><use xlink:href="sprite.svg#instagram"></use></a>
+								</svg>
+								<svg class='social'>
+									<a href="#"><use xlink:href="sprite.svg#facebook"></use></a>
+								</svg>
+								<svg class='social'>
+									<a href="#"><use xlink:href="sprite.svg#telegram"></use></a>
+								</svg>
+								<svg class='social'>
+									<a href="#"><use xlink:href="sprite.svg#youtube"></use></a>
+								</svg>
+								<svg class='social'>
+									<a href="#"><use xlink:href="sprite.svg#inn"></use></a>
+								</svg>
 							</div>
 						</div>
 					</div>
+					<div class='content-container'>
+						<h4 class ='footer_titles'>Подписаться</h4>
+						<div class='footer__subscribe'>
+							<form class = 'footer__subscribe__Email-subscribe'>
+								<input type="email" placeholder="Email" required>
+								<button type="button"><svg><use xlink:href="sprite.svg#Email"></use></svg></button>
+							</form>
+							<div class = 'footer__subscribe__certificate'>
+								<div class='footer__subscribe__certificate-text'>
+									<p>Являемся золотым сертифицированным партнером компании “1С-Битрикс”</p>
+								</div>
+								<div class="footer__subscribe__certificate-image">
+									<a href='#' class ='image_link'>
+										<img src = "/img/sotbit_about_us_bitrix_gold1.svg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="footer-low">
-				<div class ="footer-low__content">
-					<div><p class=footer-low__a>© Сотбит 2013-2021</p></div>
-					<div><p class=footer-low__b>Компания Сотбит. Веб-дизайн и разработка</p></div>
+				<div class="footer-low">
+					<div class ="footer-low__content">
+						<div><p class=footer-low__a>© Сотбит 2013-2021</p></div>
+						<div><p class=footer-low__b>Компания Сотбит. Веб-дизайн и разработка</p></div>
+					</div>
 				</div>
 			</div>
 		</footer>

@@ -1,7 +1,7 @@
 .achievements{
     position: relative;
     background: linear-gradient(79.74deg, rgba(22, 74, 168, 0.9) -5.98%, rgba(10, 124, 221, 0.9) 114.25%);
-    max-width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -12,6 +12,12 @@
 }
 .achievements__main-block{
     padding: 20px 0px 70px 150px;
+    max-width: 1920px;
+    margin: 0 auto;;
+}
+.achievements__main-block .section_header{
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 .achievements__container div{
     margin-left: -100px;

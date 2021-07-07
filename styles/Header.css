@@ -1,13 +1,16 @@
 .header{
     width: 100%;
-    max-width: 1920px;
-    height: 90px;
-    display: flex;
-    align-items: center;
     background-color: rgba(10,10,10,0.4);
     margin:0 auto;
     z-index: 10;
     position: fixed;
+}
+.header-main-menu{
+    display: flex;
+    align-items: center;
+    max-width: 1920px;
+    margin:0 auto;
+    height: 90px;
 }
 .header__menu{
     padding: 30px;
@@ -140,11 +143,6 @@ color:white;
     .select_lang{
         color:rgb(0, 0, 0);
     }
-    .logo__image{
-        fill:#00AEEF;
-        width: 100px;
-        height: 30px;
-     }
      .logo__image{
         --color-1:#00AEEF;
         --color-2:#2b83b6;

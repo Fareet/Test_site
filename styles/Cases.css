@@ -3,12 +3,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
+    background-color: rgb(255, 248, 245);
 }
 .cases__main-block{
     padding: 20px 150px 70px 150px;
     overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.cases__main-block .section_header{
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 .selects{
     margin-left: -35px;
@@ -27,8 +35,10 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-
     color: #2D3448;
+}
+.selects ul li a:hover{
+    color: #00AEEF;
 }
 .selects ul li .active{
     color: #00AEEF;
@@ -42,7 +52,7 @@
 }
 .cases__all a{
     margin-top: 30px;
-    width:calc(47%);
+    width:calc(100% / 2 - 15px);
     text-decoration: none;
     display:flex;
     justify-content: cases__main-block;
