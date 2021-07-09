@@ -45,6 +45,7 @@ color:white;
     margin-left: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .call__phones{
     font-family: Montserrat;
@@ -157,8 +158,8 @@ color:white;
     .links-block:nth-child(1), .links-block:nth-child(2) {
         display: none;
     }
-    .header{
-       justify-content: space-between;
+    .header-main-menu{
+        justify-content: space-between;
     }
     .header__links{
         padding: 0 20px 0 0 ;

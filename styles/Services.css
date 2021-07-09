@@ -16,7 +16,8 @@
 .services__block{
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-between;
+    margin-top: -50px;
 }
 .link_mini-block{
     border-color: aqua;
@@ -40,11 +41,11 @@
     line-height: 108.9%;
     color: #000000;
     text-decoration: none;
-    margin-top: -10px;
-    margin-bottom: 30px;
+    margin-top: 30px;
     flex-direction: column;
     width: calc(25%);
     padding: 10px;
+    margin-left: -10px;
 }
 .services__block a p{
     font-family: Montserrat;
@@ -67,9 +68,10 @@
         padding: 20px 0px 70px 20px;
     }
     .services__block a{
-        width: calc(50% - 30px);
-        margin-right: 30px;
+        width: calc(50% - 20px);
+        margin-right: 20px;
         box-shadow: 4px 5px 10px 5px rgb(200, 200, 200);
+        margin-left: 0px;
     }
     .link_mini-block{
         display: flex;

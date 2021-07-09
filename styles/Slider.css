@@ -23,7 +23,7 @@
     overflow: hidden;
 }
 .slide__info-block{
-    width: 50%;
+    max-width: 100%;
     padding: 200px 0px 0px 200px;
 }
 .slide__info-block h1{
@@ -44,11 +44,10 @@
 }
 .slide__icons{
     position: absolute;
-    max-width: 100%;
 }
 
 .info-block__description{
-    width: 650px;
+    max-width: 600px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -96,7 +95,7 @@
         margin-bottom: 10px;
     }
     .info-block__description{
-        width: 500px;
+        width: 390px;
         font-size: 16px;
         line-height: 24px;
     }
@@ -114,7 +113,7 @@
         margin-bottom: 10px;
     }
     .info-block__description{
-        width: 70%;
+        max-width: 95%;
         font-size: 14px;
         line-height: 24px;
         line-height: 1.3em;
