@@ -51,7 +51,7 @@
 }
 .news__block_content{
     margin-bottom: auto;
-    width: calc(90%);
+    width: 90%;
 }
 .blog__news_B2B-Blog{
     margin: 0%;
@@ -129,6 +129,9 @@
     }
     .blog__news_content-news{
         font-size: 14px;
+    }
+    .news__block_content{
+        width: 100%;
     }
 }
 @media(max-width:767px){

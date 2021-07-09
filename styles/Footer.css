@@ -84,7 +84,7 @@
 }
 .footer__contacts__socialSites{
     margin-top: 30px;
-    margin-left: -14px;
+    margin-left: -15px;
     display: flex;
     height: 30px;
 }
@@ -124,7 +124,6 @@
 
 .footer__subscribe button{
     background: #00AEEF;
-    margin-left: -0px;
     padding: 14px;
     border: none;
     box-sizing: border-box;
@@ -219,10 +218,6 @@
     .footer__subscribe{
         flex-wrap: nowrap;
         margin-top: -30px;
-    }
-    .footer__subscribe__certificate{
-        margin-top: 0px;
-        margin-left: 10px;
     }
     .footer__subscribe__Email-subscribe{
         margin-top: auto;

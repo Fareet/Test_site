@@ -26,7 +26,7 @@
 }
 .selects ul li{
     display: inline;
-    padding-right: 28px;
+    padding-right: 30px;
 }
 .selects ul li a{
     text-decoration: none;
@@ -55,7 +55,6 @@
     width:calc(100% / 2 - 15px);
     text-decoration: none;
     display:flex;
-    justify-content: cases__main-block;
 }
 .case__content{
     padding: 50px 0px 50px 20px;
@@ -65,9 +64,10 @@
     justify-content: space-between;
 }
 .content_footer{
-    width:calc(69%);
+    width:70%;
     display: flex;
     justify-content:space-between;
+    align-items: center;
 }
 .content_image{
     padding: 0%;
@@ -157,7 +157,7 @@
 @media(max-width:767px){
     .cases__all a{
         margin-top: 30px;
-        width:calc(100%);
+        width:100%;
         text-decoration: none;
         display:flex;
     }

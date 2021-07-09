@@ -24,11 +24,11 @@
 .about-us__content{
     display: flex;
     flex-wrap: wrap;
-    width: calc(45%);
+    width: 45%;
     margin-left: -10px;
 }
 .about-us__photos{
-    width: calc(50%);
+    width:50%;
     display: flex;
     flex-wrap: wrap;
    justify-content:space-between;
@@ -112,7 +112,7 @@
     .about-us__content{
         display: flex;
         flex-wrap: wrap;
-        width: calc(100%);
+        width: 100%;
         justify-content: space-between  ;
     }
     .content__text{
