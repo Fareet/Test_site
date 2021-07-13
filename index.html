@@ -10,11 +10,81 @@
 	<body>
 		<header class = 'header'>
 			<div class = header-main-menu>
-				<div class =header__menu>
-					<a href="#">
-						<svg class =menu__menu-button><use xlink:href="sprite.svg#menu"></use></svg>
-					</a>
-				</div>
+				<form class = header__menu>
+					<label></label>
+					<input class = menu__menu-button type="checkbox" name="burger" id='burger'>
+					<svg class =menu__menu-button><use xlink:href="sprite.svg#menu"></use></svg>
+					<div class = 'menu'>
+						<div class = 'menu_panel'>
+							<div class= 'panel-close'>
+								<svg class="logo__image"><use xlink:href="sprite.svg#logo"></use></svg>
+								<div class ='panel-links'>
+									<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#support"></use></svg></a>
+									<a href='#'><svg class="header__links_image"><use xlink:href="sprite.svg#buys"></use></svg></a>
+								</div>
+								<label class ='close-burger' for ='burger'><img src="img/cross.svg" class="cross" alt=""></label>
+							</div>
+							<div class ='panel-item'>
+								<a href ='#'class = "panel-items-title">MARKETPLACE</a>
+								<p>B2B Платформа</p>
+								<a href ='#' class = "panel-items-content">Компоненты</a>
+								<a href ='#' class = "panel-items-content">Модули</a>
+								<a href ='#' class = "panel-items-content">Платформы</a>
+							</div>
+							<div class ='panel-item'>
+								<a href ='#'class = "panel-items-title">1С-Битрикс</a>
+								<a href ='#' class = "panel-items-content">Лицензии</a>
+								<a href ='#' class = "panel-items-content">Продление</a>
+								<a href ='#' class = "panel-items-content">Переходы</a>
+								<a href ='#' class = "panel-items-content">Битрикс24</a>
+								<a href ='#' class = "panel-items-content">Битрикс24 (облако)</a>
+								<a href ='#' class = "panel-items-content">Битрикс24 (продление)</a>
+								<a href ='#' class = "panel-items-content">Битрикс24 (переходы)</a>
+							</div>
+							<div class ='panel-item'>
+								<a href ='#'class = "panel-items-title">Услуги</a>
+								<a href ='#' class = "panel-items-content">Интернет-магазин</a>
+								<a href ='#' class = "panel-items-content">Дизайн</a>
+								<a href ='#' class = "panel-items-content">Доработка магазина</a>
+								<a href ='#' class = "panel-items-content">Техническая поддержка</a>
+								<a href ='#' class = "panel-items-content">Битрикс24</a>
+								<a href ='#' class = "panel-items-content">Дополнительные услуги</a>
+							</div>
+							<div class ='panel-item'>
+									<a href ='#'class = "panel-items-title">ПОРТФОЛИО</a>
+									<a href ='#'class = "panel-items-title">ДОКУМЕНТАЦИЯ</a>
+									<a href ='#'class = "panel-items-title">БЛОГ</a>
+									<a href ='#'class = "panel-items-title">КОНТАКТЫ</a>
+									<a class = 'panel-phones' href="#">+7 (495) 278-08-54</a>
+									<a class = 'panel-phones' href="#">+7 (812) 670-07-40</a>
+								<div class = 'social-blog'>
+									<p>Мы в соцсетях:</p>
+									<div class = 'socialSites'>
+										<svg class='social'>
+											<a href="#" class ='vk'><use xlink:href="sprite.svg#vk"></use></a>
+										</svg>
+										<svg class='social'>
+											<a href="#" class ='instagram'><use xlink:href="sprite.svg#instagram"></use></a>
+										</svg>
+										<svg class='social'>
+											<a href="#" class ='facebook'><use xlink:href="sprite.svg#facebook"></use></a>
+										</svg>
+										<svg class='social'>
+											<a href="#" class ='telegram'><use xlink:href="sprite.svg#telegram"></use></a>
+										</svg>
+										<svg class='social'>
+											<a href="#" class ='youtube'><use xlink:href="sprite.svg#youtube"></use></a>
+										</svg>
+										<svg class='social'>
+											<a href="#" class ='inn'><use xlink:href="sprite.svg#inn"></use></a>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<a class='massage_send-massage2' href='#'>Написать письмо</a>
+						</div>
+					</div>
+				</form>
 				<div class =header__logo>
 					<svg class="logo__image"><use xlink:href="sprite.svg#logo"></use></svg>
 				</div>
@@ -476,24 +546,24 @@
 								<a href=#>+7 (812) 670-07-40</a>
 								<p>Санкт-Петербург</p>
 							</div>
-							<div class = 'footer__contacts__socialSites'>
+							<div class = 'socialSites'>
 								<svg class='social'>
-									<a href="#"><use xlink:href="sprite.svg#vk"></use></a>
+									<a href="#" class ='vk'><use xlink:href="sprite.svg#vk"></use></a>
 								</svg>
 								<svg class='social'>
-									<a href="#"><use xlink:href="sprite.svg#instagram"></use></a>
+									<a href="#" class ='instagram'><use xlink:href="sprite.svg#instagram"></use></a>
 								</svg>
 								<svg class='social'>
-									<a href="#"><use xlink:href="sprite.svg#facebook"></use></a>
+									<a href="#" class ='facebook'><use xlink:href="sprite.svg#facebook"></use></a>
 								</svg>
 								<svg class='social'>
-									<a href="#"><use xlink:href="sprite.svg#telegram"></use></a>
+									<a href="#" class ='telegram'><use xlink:href="sprite.svg#telegram"></use></a>
 								</svg>
 								<svg class='social'>
-									<a href="#"><use xlink:href="sprite.svg#youtube"></use></a>
+									<a href="#" class ='youtube'><use xlink:href="sprite.svg#youtube"></use></a>
 								</svg>
 								<svg class='social'>
-									<a href="#"><use xlink:href="sprite.svg#inn"></use></a>
+									<a href="#" class ='inn'><use xlink:href="sprite.svg#inn"></use></a>
 								</svg>
 							</div>
 						</div>

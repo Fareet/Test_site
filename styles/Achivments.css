@@ -1,19 +1,18 @@
 .achievements{
     position: relative;
+    overflow: hidden;
     background: linear-gradient(79.74deg, rgba(22, 74, 168, 0.9) -5.98%, rgba(10, 124, 221, 0.9) 114.25%);
     max-width: 100%;
     margin: 0 auto;
-    overflow: hidden;
 }
 .achievements__container{
     display: flex;
     flex-wrap: nowrap;
-
 }
 .achievements__main-block{
     padding: 20px 0px 70px 150px;
     max-width: 1920px;
-    margin: 0 auto;;
+    margin: 0 auto;
 }
 .achievements__main-block .section_header{
     margin-top: 10px;
@@ -30,7 +29,6 @@
     font-size: 36px;
     line-height: 44px;
     color: #FFFFFF;
-
 }
 .achievements__container p{
     margin-top: -20px;

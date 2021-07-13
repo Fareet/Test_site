@@ -6,11 +6,10 @@
     background-color: rgb(255, 248, 245);
 }
 .about-us__main-block{
-    padding: 20px 150px 70px 150px;
     overflow: hidden;
+    padding: 20px 150px 70px 150px;
     max-width: 1920px;
     margin: 0 auto;
-
 }
 .about-us__submain-block{
     display: flex;
@@ -24,24 +23,24 @@
 .about-us__content{
     display: flex;
     flex-wrap: wrap;
-    width: 45%;
     margin-left: -10px;
-}
-.about-us__photos{
-    width:50%;
-    display: flex;
-    flex-wrap: wrap;
-   justify-content:space-between;
+    width: 45%;
 
 }
+.about-us__photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width:50%;
+}
 .content__text{
+    padding: 10px;
+    color: #6B6B6B;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    color: #6B6B6B;
-    padding: 10px;
 }
 .content__about-us-block{
     display: flex;
@@ -52,14 +51,13 @@
 }
 .about-us-block_info{
     width: calc(33.33333% - 20px);
-
 }
 .about-us-block_blue{
-    color: #00AEEF;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
+    color: #00AEEF;
 }
 .about-us-block_text{
     font-family: Montserrat;
@@ -100,34 +98,33 @@
 }
 @media(max-width:1450px){
     .about-us__photos{
-        width: 1450px;
         display: flex;
         flex-wrap: nowrap;
-       justify-content:unset;
+        justify-content:unset;
+        width: 1450px;
     }
     .about-us-block_info{
-
         width: calc(50% - 20px);
     }
     .about-us__content{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         width: 100%;
-        justify-content: space-between  ;
     }
     .content__text{
         width: 45%;
     }
     .content__about-us-block{
-        margin-top: 0%;
         display: flex;
         flex-wrap: wrap;
+        margin-top: 0%;
         width: 45%;
     }
     .about-us-block_blue{
-        font-size: 36px;
         margin: 0%;
         padding: 0%;
+        font-size: 36px;
     }
     .photo-us:nth-child(1), .photo-us:nth-child(2), .photo-us:nth-child(3), .photo-us:nth-child(4){
         width: 300px;

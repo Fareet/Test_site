@@ -82,23 +82,18 @@
     margin-top: 6px;
     margin-bottom: 40px;
 }
-.footer__contacts__socialSites{
+.socialSites{
     margin-top: 30px;
     margin-left: -15px;
     display: flex;
     height: 30px;
 }
-.footer__contacts__socialSites svg{
+.socialSites svg{
     margin-left: 16px;
     width: 30px;
     height: 30px;
 }
-.footer__contacts__socialSites svg a{
-     fill:#C7C7C7
-}
-.footer__contacts__socialSites a:hover{
-    fill:  #F40000;
-}
+
 .footer__subscribe__Email-subscribe{
     display: flex;
     flex-wrap: nowrap;
@@ -129,6 +124,7 @@
     box-sizing: border-box;
     border-radius:  0 4px 4px 0;
     font-size: 20px;
+    cursor: pointer;
 }
 .footer__subscribe button:active {
     background: #016a85;
