@@ -26,7 +26,18 @@ body{
     color: #ffffff;
     margin:0%;
 }
-.see_all{
+.see_all-1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Montserrat;
+    color: #00AEEF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.see_all-2{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -91,7 +102,7 @@ body{
     .block_title{
         font-size: 25px;
     }
-    .see-all-block{
+    .see_all-1{
         display: none;
     }
     .see-all-block2{
