@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+body {
+    background: #333333;
+    margin: 0;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+div {
+    border: none;
+    font-size: 1em;
+}
+
+tr td {
+    font-size: 1em;
+    border: none;
+}
+
+img {
+    border: none;
+}
+
+a {
+    text-decoration: underline;
+    color: #333;
+}
+
+a:hover {
+    color: #00a0de;
+    text-decoration: underline;
+}
+
+.header {
+    padding: 0;
+    margin: 0 0 10px 0;
+    border: none;
+}
+
+.logo {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0;
+    border: none;
+}
+
+.logo img {
+    border: none;
+}
+
+.main-menu {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    display: flex;
+}
+
+.main-menu li {
+    list-style: none;
+    background: url(i/top-menu-bg.gif) bottom repeat-x #efefef;
+    margin: 0 3px 0 0;
+    padding: 0;
+	
+}
+
+.main-menu.bottom {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+.main-menu-bottom li {
+    float: none;
+    font-size: 12px;
+}
+
+.main-menu li a {
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+    color: #999999;
+}
+
+.main-menu li a:hover {
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    background: url(i/fl-bg-hover.gif) bottom repeat-x #67bdff;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.left-collum-index {
+    background: #ffffff;
+    margin: 0;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.left-collum-index h1 {
+    font-size: 1.4em;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+
+.right-collum-index {
+    background: #efefef;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    border-left: solid 1px #aeaeae;
+    vertical-align: top;
+}
+
+.footer {
+    color: #ffffff;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.footer a {
+    color: #ffffff;
+}
+.footer a:hover {
+    color: #cccccc;
+}
+
+.project-folders-menu {
+    background: #333333;
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+}
+    
+.project-folders-v {
+    margin: 0;
+    padding: 0;
+}
+
+.project-folders-v li {
+    list-style: none;
+    float: left;
+    background: #333333;
+    margin: 0 3px 0 0;
+    padding: 0;
+}
+
+.project-folders-v li a {
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+    color: #999999;
+}
+
+.project-folders-v li a:hover {
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+    color: #999999;
+    background: bottom repeat-x #444444;
+}
+
+.project-folders-v-active span,
+.project-folders-v-active a {
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    background: #efefef;
+    font-weight: bold;
+}
+
+.index-auth {
+    margin: 0;
+    padding: 10px;
+}
+
+.iat {
+    color: #777777;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.iat input {
+    width: 99% !important;
+}
+
+.iat label {
+	display: block;
+}
+
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.block {
+    display: flex;
+    width: 25%;
+    box-shadow: 2px 2px 4px 2px rgb(184, 183, 183);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(244, 240, 255);
+    margin-bottom: 20px;
+}
+.Image img {
+    width: 310px;
+    height: 170px;
+}
+.content{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+.content a:hover{
+    color: #00a0de;
+}
+.content a{
+   width: 310px;
+}
+.content-text {
+
+    width: 310px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+}
+.addInBlog{
+    display: inline-block;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #00a0de;
+}
+.addInBlog:hover{
+    text-decoration: none;
+    color: #000000;
+    background-color: #0284db;
+}
+
+.PostsImageBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.PostTitleBlock {
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+}
+.PostTitleBlock h2{
+margin-top: 10px;
+}
