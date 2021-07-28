@@ -1,6 +1,9 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/include/Redirect.php';
 
+(new Redirect)->LocationOnMainPage((new Authorization)->Log_in());
+
+
 ?>
 
 <head>
@@ -21,14 +24,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/Redirect.php';
 
 				<div class="project-folders-menu">
 					<ul class="project-folders-v">
-						<li class="project-folders-v-active"><a href="/route/Autorization/">Авторизация</a></li>
+						<li class="project-folders-v-active"><a href="/route/Authorization/">Авторизация</a></li>
 						<li><a href="#">Регистрация</a></li>
 						<li><a href="#">Забыли пароль?</a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</div>
 				<div class="index-auth">
-					<form action='/route/Autorization/?log_in' method="post">
+					<form action='/route/Authorization/?log_in' method="post">
 						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							<tr>
 								<td class="iat">

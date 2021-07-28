@@ -1,6 +1,8 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/SQLConnection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckAuthorization.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/main_menu.php';
 
-require('/OpenServer/domains/task.manager3/classes/SQLConnection.php');
 class Profile
 {
 	private $login = '';
@@ -32,8 +34,7 @@ class Profile
 	{
 		$this->GetDataByUser();
 		$strGroup = "Группы : ";
-		$strGroup = implode(", ", $this->groups);
-		$strGroup = substr($strGroup, 0, -2);
+		$strGroup .= implode(", ", $this->groups) . '.';
 		$checkActivity = (boolval($this->activity) ? 'checked' : '');
 		$checkReceiveEmail = (boolval($this->receiveEmail) ? 'checked' : '');
 
@@ -55,19 +56,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/templates /header.php';
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td class="left-collum-index">
-
 			<h1>Профиль</h1>
 			<p><? (new Profile)->PrintUserData() ?>
-			<p>
 		</td>
 		<td class="right-collum-index">
-
 			<div class="project-folders-menu">
 				<ul class="project-folders-v">
 					<? Authorization() ?>
 					<div class="clearfix"></div>
 			</div>
-
 		</td>
 	</tr>
 </table>

@@ -13,19 +13,19 @@ class NavigateMenu
 		],
 		[
 			'title' => 'О нас',
-			'path' => '/route/About/'
+			'path' => '/About'
 		],
 		[
 			'title' => 'Контакты',
-			'path' => '/route/Contacts/'
+			'path' => '/Contacts'
 		],
 		[
 			'title' => 'Новости',
-			'path' => '/route/News/'
+			'path' => '/News'
 		],
 		[
 			'title' => 'Каталог',
-			'path' => '/route/Catalog/'
+			'path' => '/Catalog'
 		],
 		[
 			'title' => 'Профиль',
@@ -50,14 +50,14 @@ class NavigateMenu
 	{
 		foreach ($this->menu as $key) {
 			if (!$this->success) {
-				$path = '/route/Autorization/';
+				$path = '/route/Authorization/';
 			} else {
 				$path = $key["path"];
 			}
 			if ($key["path"] == $this->url) {
 				ini_set('session.cookie_lifetime', 1200);
 				$this->title = $key["title"];
-				echo '<li style = "text-decoration :underline;font-size: 16px""><a  href = ' . $path . '>' . $key["title"] . '</a></li>';
+				echo '<li style = "text-decoration :underline; font-size: 16px""><a  href = ' . $path . '>' . $key["title"] . '</a></li>';
 			} else {
 				echo '<li style = "font-size: 16px"><a href = ' . $path . '>' . $key["title"] . '</a></li>';
 			}
@@ -67,7 +67,7 @@ class NavigateMenu
 	{
 		foreach ($this->menu as $key) {
 			if (!$this->success) {
-				$path = '/route/Autorization/';
+				$path = '/route/Authorization/';
 			} else {
 				$path = $key["path"];
 			}

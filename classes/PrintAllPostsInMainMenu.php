@@ -15,13 +15,14 @@ class PrintAllPostsInMainMenu
             $this->image = $row["image"];
             $this->text = $row["text"];
             $this->date = $row["date_time"];
-            $this->RenderAllPosts();
+            $PostsArray[] = $this->RenderAllPosts();
         }
+        return $PostsArray;
     }
 
     private function RenderAllPosts()
     {
-        echo (new DivElement('block'))
+        return (new DivElement('block'))
             ->addElement(
                 (new DivElement('image'))
                     ->addElement(new ImageElement('', "/image/$this->image"))
@@ -34,8 +35,7 @@ class PrintAllPostsInMainMenu
                             ->addElement(new PElement('content-text', $this->date))
                     )
                     ->addElement(new PElement('content-text', $this->text))
-                    ->addElement(new AElement('link', "/route/Posts/write/posts.php?Page=$this->id", 'Подробнее'))
-            )
-            ->render();
+                    ->addElement(new AElement('Blog-link', "/route/Posts/write/posts.php?Page=$this->id", 'Подробнее'))
+            );
     }
 }

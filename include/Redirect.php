@@ -1,6 +1,6 @@
 <?php
 
-include $_SERVER['DOCUMENT_ROOT'] . '/include/success.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/include/success.php';
 
 class Redirect
 {
@@ -11,5 +11,3 @@ class Redirect
         }
     }
 }
-
-(new Redirect)->LocationOnMainPage((new Authorization)->Log_in());

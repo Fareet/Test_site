@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^task.manager3$ [NC]
+RewriteRule ^(.*)$ http://task.manager3/$1 [L,R=301]
+ErrorDocument 404 /

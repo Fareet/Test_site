@@ -37,11 +37,13 @@ class FormElement extends RenderableGroup
 {
     protected $action;
     protected $enctype;
-    public function __construct($class = '', $action = '', $enctype = '')
+    protected $method;
+    public function __construct($class = '', $action = '', $enctype = '', $method = '')
     {
         $this->class = $class;
         $this->action = $action;
         $this->enctype = $enctype;
+        $this->method = $method;
     }
     public function render(): string
     {
@@ -69,11 +71,25 @@ class PElement extends RenderableGroup
     }
 }
 
+class H1Element extends RenderableGroup
+{
+    public function render(): string
+    {
+        return "<h1 class='$this->class'>" . $this->text . "</h1>";
+    }
+}
 class H2Element extends RenderableGroup
 {
     public function render(): string
     {
         return "<h2 class='$this->class'>" . $this->text . "</h2>";
+    }
+}
+class H3Element extends RenderableGroup
+{
+    public function render(): string
+    {
+        return "<h3 class='$this->class'>" . $this->text . "</h3>";
     }
 }
 class LabelElement extends RenderableGroup
@@ -136,4 +152,47 @@ class RadioInputElement extends InputElement
 class FormButtonElement extends InputElement
 {
     protected $type = 'submit';
+}
+class TableElement extends RenderableGroup
+{
+    protected $cellspacing;
+    protected $cellpadding;
+    public function __construct($class = '', $cellspacing = '0', $cellpadding = '0')
+    {
+        $this->class = $class;
+        $this->cellspacing = $cellspacing;
+        $this->cellpadding = $cellpadding;
+    }
+    public function render(): string
+    {
+        return "<table class = '$this->class 'cellspacing = '$this->cellspacing 'cellpadding = '$this->cellpadding>" . parent::render() . "</table>";
+    }
+}
+class TRElement extends RenderableGroup
+{
+    public function render(): string
+    {
+        return "<tr class = '$this->class'>" . parent::render() . "</tr>";
+    }
+}
+class TDElement extends RenderableGroup
+{
+    public function render(): string
+    {
+        return "<td class = '$this->class'>" . parent::render() . "</td>";
+    }
+}
+class ULElement extends RenderableGroup
+{
+    public function render(): string
+    {
+        return "<ul class = '$this->class'>" . parent::render() . "</ul>";
+    }
+}
+class LIElement extends RenderableGroup
+{
+    public function render(): string
+    {
+        return "<li class = '$this->class'>" . parent::render() . "</li>";
+    }
 }
