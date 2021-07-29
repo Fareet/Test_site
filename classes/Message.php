@@ -1,6 +1,8 @@
 <?php
 
-include $_SERVER['DOCUMENT_ROOT'] . '/classes/SQLConnection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/SQLConnection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckAuthorization.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/main_menu.php';
 class Message
 {
 	private $addressee_id;

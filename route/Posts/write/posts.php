@@ -1,6 +1,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/classes/SeeSelectPost.php';
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckAuthorization.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/main_menu.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/templates /header.php';
 ?>
 

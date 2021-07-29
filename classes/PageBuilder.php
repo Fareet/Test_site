@@ -5,27 +5,20 @@ Class PageBuilder
     protected $title;
     protected $content;
     protected $description;
+    protected $page;
 
     public function __construct($title = "Ошибка 404", $description = "Не удалось найти страницу ", $content = Null)
     {
         $this->title = $title;
         $this->content = $content;
         $this->description = $description;
-    }
-    public function AddContent(Renderable $element)
-    {
-        $this->content[] = $element;
+        $this->page = new Page();
     }
     public function BuildPage()
     {
-
-
-
-        $page = new Page();
-
-        $page->SetTitle($this->title);
-        $page->SetContent($this->content);
-        $page->SetDescription($this->description);
-        $page->Render();
+        $this->page->SetTitle($this->title);
+        $this->page->SetContent($this->content);
+        $this->page->SetDescription($this->description);
+        $this->page->Render();
     }
 }

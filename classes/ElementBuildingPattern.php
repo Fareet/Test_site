@@ -137,10 +137,22 @@ class AElement extends RenderableGroup
 class InputElement extends RenderableGroup
 {
     protected $type = 'text';
+    protected $class;
+    protected $id;
+    protected $name;
+    protected $value;
+    public function __construct($class = '', $id = '', $name = '', $value = '')
+    {
+        $this->class = $class;
+        $this->id = $id;
+        $this->name = $name;
+        $this->value = $value;
+    }
+
 
     public function render(): string
     {
-        return "<input class='$this->class' type='$this->type' />" . $this->text;
+        return "<input class='$this->class' type='$this->type' name='$this->name' id='$this->id' value='$this->value'  />" . $this->text;
     }
 }
 
@@ -152,6 +164,10 @@ class RadioInputElement extends InputElement
 class FormButtonElement extends InputElement
 {
     protected $type = 'submit';
+}
+class PasswordInputElement extends InputElement
+{
+    protected $type = 'password';
 }
 class TableElement extends RenderableGroup
 {

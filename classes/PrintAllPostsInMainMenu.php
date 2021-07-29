@@ -7,17 +7,20 @@ class PrintAllPostsInMainMenu
     private $title;
     private $date;
 
+
     public function GetInformationAboutAllPosts()
     {
+        $FlexBlockForPosts = new DivElement('blog') ;
         foreach ((new DataBaseManager())->getAll("blog.blog") as $row) {
             $this->id = $row["id"];
             $this->title = $row["title"];
             $this->image = $row["image"];
             $this->text = $row["text"];
             $this->date = $row["date_time"];
-            $PostsArray[] = $this->RenderAllPosts();
+
+            $FlexBlockForPosts->addElement($this->RenderAllPosts());
         }
-        return $PostsArray;
+        return [$FlexBlockForPosts];
     }
 
     private function RenderAllPosts()

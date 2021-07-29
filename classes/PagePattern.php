@@ -24,7 +24,7 @@ class Page
     private function ShowContent()
     {
         if ($this->content != null){
-           $content = new DivElement('blog');
+           $content = new DivElement();
            foreach($this->content as $contentBlocks){
             $content->addElement(
                 $contentBlocks
@@ -32,7 +32,7 @@ class Page
         }
             return $content;
         } else  {
-           return  (new DivElement('blog'));
+           return  (new DivElement());
         }
     }
     private function ShowButtonForCreatePost()
