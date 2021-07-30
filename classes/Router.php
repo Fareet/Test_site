@@ -41,12 +41,18 @@ class Router
 
 	public static function SetDescription($PageName, String $newDescription)
 	{
-		self::$PagesInfoArray[$PageName]['description'] = $newDescription;
+		if(array_key_exists($PageName,self::$PagesInfoArray))
+		{
+			self::$PagesInfoArray[$PageName]['description'] = $newDescription;
+		}
 	}
 
 	public static function SetTitle($PageName, String $newTitle)
 	{
-		self::$PagesInfoArray[$PageName]['title'] = $newTitle;
+		if(array_key_exists($PageName,self::$PagesInfoArray))
+		{
+			self::$PagesInfoArray[$PageName]['title'] = $newTitle;
+		}
 	}
 }
 
