@@ -1,6 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/include/success.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/LoadPageClass.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/AllClasses.php';
 
 class NavigateMenu
 {
@@ -11,11 +10,16 @@ class NavigateMenu
 
 	public function __construct()
 	{
-		$this->menu = (new LoadPage)->GetPagesInfoArray();
+
+	}
+	private function GetRouter()
+	{
+		$this->menu = Router::GetPagesInfoArray();
 	}
 
 	function showMenu($path)
 	{
+		$this->GetRouter();
 		$this->url = $_SERVER['REQUEST_URI'];
 		$this->success = (new Authorization)->Log_in();
 		if ($path == 'header') {
@@ -26,10 +30,6 @@ class NavigateMenu
 	}
 	function HeaderNavMenu()
 	{
-		$this->menu[] = [
-			'title' => 'Профиль',
-			'path' => '/route/Profile/'
-		];
 		$this->menu[] = [
 			'title' => 'Сообщения',
 			'path' => '/route/Posts/'

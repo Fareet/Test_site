@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/PagePattern.php';
-Class PageBuilder
+
+class PageBuilder
 {
     protected $title;
     protected $content;

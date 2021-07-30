@@ -1,7 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/PrintAllPostsInMainMenu.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/ElementBuildingPattern.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckAuthorization.php';
+
 
 class Page
 {
@@ -9,36 +7,34 @@ class Page
     protected $content;
     protected $description;
 
-    function SetTitle ($title)
+    function SetTitle($title)
     {
         $this->title = $title;
     }
-    function SetDescription ($description)
+    function SetDescription($description)
     {
         $this->description = $description;
     }
-    function SetContent ($content)
+    function SetContent($content)
     {
         $this->content = $content;
     }
     private function ShowContent()
     {
-        if ($this->content != null){
-           $content = new DivElement();
-           foreach($this->content as $contentBlocks){
-            $content->addElement(
-                $contentBlocks
-            );
+        $content = new DivElement();
+        if ($this->content != null) {
+            foreach ($this->content as $contentBlocks) {
+                $content->addElement(
+                    $contentBlocks
+                );
+            }
         }
-            return $content;
-        } else  {
-           return  (new DivElement());
-        }
+        return $content;
     }
     private function ShowButtonForCreatePost()
     {
 
-        if((new Authorization)->GetUserRole() == 'Admin'){
+        if ((new Authorization)->GetUserRole() == 'Admin') {
             return new AElement('addInBlog', '/include/CreatePost.php', 'Добавить пост');
         } else {
             return new PElement();
@@ -86,7 +82,6 @@ class Page
                     )
             )
             ->render();
-            require_once  $_SERVER['DOCUMENT_ROOT'] . './templates /footer.php';
+        require_once  $_SERVER['DOCUMENT_ROOT'] . './templates /footer.php';
     }
 }
-

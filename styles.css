@@ -244,6 +244,11 @@ a:hover {
     line-clamp: 3;
     box-orient: vertical;
 }
+
+.content-data {
+    width: 115px;
+    text-align: right;
+}
 .addInBlog{
     display: inline-block;
     color: #fff;

@@ -1,7 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/SendMessage.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckAuthorization.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/main_menu.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Message.php';
 $addMessage = new AddMessage();
 
 if (!empty($_POST)) {

@@ -1,7 +1,5 @@
 <?php
-require('/OpenServer/domains/task.manager3/classes/SQLConnection.php');
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckAuthorization.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/main_menu.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Message.php';
 class SeeMessage
 {
 	private $arrKeys;

@@ -165,6 +165,31 @@ class FormButtonElement extends InputElement
 {
     protected $type = 'submit';
 }
+
+class CheckBoxElement extends InputElement
+{
+    protected $type = 'checkbox';
+    protected $class;
+    protected $id;
+    protected $name;
+    protected $disabled;
+    protected $checked;
+    protected $text;
+    public function __construct($class = '', $id = '', $name = '', $disabled = false, $checked = '', $text = '')
+    {
+        $this->class = $class;
+        $this->id = $id;
+        $this->name = $name;
+        $this->disabled = $disabled;
+        $this->checked = $checked;
+        $this->text = $text;
+    }
+
+    public function render(): string
+    {
+        return "$this->text <input class='$this->class' type='$this->type' name='$this->name' id='$this->id' disabled='$this->disabled'  $this->checked /><br> ";
+    }
+}
 class PasswordInputElement extends InputElement
 {
     protected $type = 'password';
