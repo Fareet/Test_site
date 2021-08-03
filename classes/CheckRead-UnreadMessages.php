@@ -22,32 +22,33 @@ class Message
 	private function GetMessageData()
 	{
 		$this->GetAddressee();
-		if (in_array("Пользователь имеющий право писать сообщения", $this->groups)) {
-			return "SELECT m.*, s.name AS sections_name  FROM lessons.message as m
-				LEFT JOIN lessons.sections AS s ON s.id = m.section_id
-				WHERE m.addressee_id = " . $this->addressee_id;
-		} else {
-			echo "Вы сможете отправлять сообщения после прохождения модерации.";
-		}
+		return "SELECT m.*, s.name AS sections_name  FROM lessons.message as m
+			LEFT JOIN lessons.sections AS s ON s.id = m.section_id
+			WHERE m.addressee_id = " . $this->addressee_id;
 	}
 
 	public function GetUnReadMessages()
 	{
+		$unReadMessageBlock = new DivElement('');
 		$sql = $this->GetMessageData();
 		foreach ((new DataBaseManager)->ExecuteRequest($sql) as $row) {
 			if ($row['is_reading'] == 0) {
-				echo  "<p>&#10026;<a href = '/route/Posts/write/message.php?Page=" . $row['id'] . "'>" . $row['header'] . '  ' . $row['sections_name'] . '</a></p>';
+				$unReadMessageBlock->addElement(new AElement('',"/Messages?Page=" . ($row['id'] + 1), $row['header'] . '  ' . $row['sections_name'] . '<br><br>'));
 			}
 		}
+		return $unReadMessageBlock;
 	}
 
 	public function GetReadMessages()
 	{
+		$readMessageBlock = new DivElement('');
 		$sql = $this->GetMessageData();
 		foreach ((new DataBaseManager)->ExecuteRequest($sql) as $row) {
 			if ($row['is_reading'] == 1) {
-				echo  "<p><a href = '/route/Posts/write/message.php?Page=" . $row['id'] . "'>" . $row['header'] . '  ' . $row['sections_name'] . '</a></p>';
+				$readMessageBlock->addElement(new AElement('',"/Messages?Page=" . ($row['id'] + 1), $row['header'] . '  ' . $row['sections_name'] . '<br><br>'));
 			}
+
 		}
+		return $readMessageBlock;
 	}
 }

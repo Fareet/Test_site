@@ -1,7 +1,8 @@
 <?php
-
 $title = 'Project - ведение списков';
 $pathFile = basename(__FILE__, '.php');
+$menu = new NavigateMenu;
+$menu->setRouter($router);
 
 accountExit();
 ?>
@@ -22,7 +23,7 @@ accountExit();
 
 	<div class="clear">
 		<ul class="main-menu">
-			<? (new NavigateMenu)->showMenu($pathFile) ?>
+			<?$menu->showMenu('header')?>
 		</ul>
 	</div>
 	<?

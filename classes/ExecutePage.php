@@ -3,20 +3,15 @@
 class ExecutePage
 {
     protected $router;
+    protected $currentPage;
 
-    public function __construct()
+    public function __construct(DataForPage $contentForPage, $router)
     {
-        $this->router = Router::GetPagesInfoArray();
+        $this->router = $router;
+        $this->currentPage = new PageBuilder ($contentForPage->GetTitle(), $contentForPage->GetDescription(), $contentForPage->GetContent());
     }
-    public function Execute(ContentForPage $contentForPage)
+    public function Execute()
     {
-
-        foreach ($this->router as $page) {
-            if ($_SERVER['REQUEST_URI'] == $page['path']) {
-                (new PageBuilder($page['title'], $page['description'], $contentForPage->GetContent()))->BuildPage();
-                exit;
-            }
-        }
-        (new PageBuilder())->BuildPage();
+        return $this->currentPage->BuildPage($this->router);
     }
 }

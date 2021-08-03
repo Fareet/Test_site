@@ -4,7 +4,7 @@ $pathFile = basename(__FILE__, '.php');
 
 <div class="clearfix">
     <ul class="main-menu bottom">
-        <? (new NavigateMenu)->showMenu($pathFile) ?>
+        <? $menu->showMenu('footer') ?>
     </ul>
 </div>
 

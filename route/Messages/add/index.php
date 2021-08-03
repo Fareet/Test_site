@@ -1,5 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Message.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/CheckRead-UnreadMessages.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/SendMessage.php';
 $addMessage = new AddMessage();
 
 if (!empty($_POST)) {

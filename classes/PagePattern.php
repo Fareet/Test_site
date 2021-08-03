@@ -23,27 +23,25 @@ class Page
     {
         $content = new DivElement();
         if ($this->content != null) {
-            foreach ($this->content as $contentBlocks) {
-                $content->addElement(
-                    $contentBlocks
-                );
-            }
+            $content->addElement(
+                $this->content
+            );
+
         }
         return $content;
     }
     private function ShowButtonForCreatePost()
     {
-
-        if ((new Authorization)->GetUserRole() == 'Admin') {
+        if ((new Authorization)->GetUserRole() == 'Admin' && $_SERVER['REQUEST_URI'] == '/') {
             return new AElement('addInBlog', '/include/CreatePost.php', 'Добавить пост');
         } else {
             return new PElement();
         }
     }
 
-    function Render()
+    public function Render()
     {
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
+
         echo (new TableElement('Table'))
             ->addElement(
                 (new TRElement())
@@ -82,6 +80,6 @@ class Page
                     )
             )
             ->render();
-        require_once  $_SERVER['DOCUMENT_ROOT'] . './templates /footer.php';
+
     }
 }

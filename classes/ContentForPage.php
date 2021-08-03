@@ -1,57 +1,67 @@
 <?php
 
-class ContentForPage
+class DataForPage
 {
-    protected $content;
+    protected $content = [];
+    protected $currentPageData;
     protected $router;
-    protected static $contentContainer;
 
-    public function __construct()
+    public function __construct($router)
     {
-        self::$contentContainer = [
-            'MainPage' => [
-                'Content' => (new PrintAllPostsInMainMenu())->GetContent()
-            ],
-            'AboutUs' => [
-                'Content' => [(new PElement('', "Какой-то контент"))]
-            ],
-            'Catalog' => [
-                'Content' => null
-            ],
-            'Posts' => [
-                'Content' => (new PrintAllPostsInMainMenu())->GetContent()
-            ],
-            'News' => [
-                'Content' => null
-            ],
-            'Profile' => [
-                'Content' => (new Profile)->RenderProfileInfo()
-            ],
-        ];
-    }
-
-    private function SetRouter()
-    {
-        $this->router = Router::GetPagesInfoArray();
+        $this->router = $router;
+        $this->currentPageData = $this->router->GetPageData();
     }
     public function SelectContent()
     {
-        $this->SetRouter();
-        foreach ($this->router as $key => $page) {
-            if ($_SERVER['REQUEST_URI'] == $page['path'] && array_key_exists($key, self::$contentContainer)) {
-                $this->content = self::$contentContainer[$key]['Content'];
-                return $this->content;
+        if (!empty($this->currentPageData)){
+            if  (class_exists ("C". key($this->currentPageData))) {
+                $class =  "C" . key($this->currentPageData);
+                if ($this->isDetailPage() == true){
+                    $this->content = (new $class())->GetObject($this->router->getSubPathID());
+                } else {
+                    $this->content = (new $class())->GetObject();
+                }
             }
         }
-        return $this->content;
+    }
+    public function isDetailPage()
+    {
+       return (bool) $this->currentPageData[key($this->currentPageData)]['detail'] ?? false;
     }
     public function GetContent()
     {
         return $this->content;
     }
-
-    public static function AddContent($PageName, Renderable $addedElement)
+    public function GetTitle()
     {
-        static::$contentContainer[$PageName]['Content'][] = $addedElement;
+        if (!empty($this->currentPageData)){
+            return $this->currentPageData[key($this->currentPageData)]['title'];
+        }
     }
+    public function GetDescription()
+    {
+        if (!empty($this->currentPageData)){
+             return $this->currentPageData[key($this->currentPageData)]['description'];
+        }
+    }
+    public function setDescription($PageName, String $newDescription)
+	{
+        if (!empty($this->currentPageData)){
+            if(key($this->currentPageData) == $PageName)
+            {
+                $this->currentPageData[key($this->currentPageData)]['description'] = $newDescription;
+            }
+        }
+	}
+
+	public function setTitle($PageName, String $newTitle)
+	{
+        if (!empty($this->currentPageData)){
+            if(key($this->currentPageData) == $PageName)
+            {
+                $this->currentPageData[key($this->currentPageData)]['title'] = $newTitle;
+            }
+        }
+
+	}
 }

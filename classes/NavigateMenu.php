@@ -3,23 +3,22 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/AllClasses.php';
 
 class NavigateMenu
 {
-	public $title;
-	public $url;
-	public $success;
-	public $menu;
+	private $title;
+	private $url;
+	private $success;
+	private $menu;
 
-	public function __construct()
+	public function setRouter(Router $router)
 	{
-
+		if ($router->GetPagesInfoArray()!= null){
+			$this->menu = $router->GetPagesInfoArray();
+		} else {
+			$this->menu = [];
+		}
 	}
-	private function GetRouter()
-	{
-		$this->menu = Router::GetPagesInfoArray();
-	}
 
-	function showMenu($path)
+	public function showMenu($path)
 	{
-		$this->GetRouter();
 		$this->url = $_SERVER['REQUEST_URI'];
 		$this->success = (new Authorization)->Log_in();
 		if ($path == 'header') {
@@ -28,12 +27,8 @@ class NavigateMenu
 			$this->FooterNavMenu();
 		}
 	}
-	function HeaderNavMenu()
+	public function HeaderNavMenu()
 	{
-		$this->menu[] = [
-			'title' => 'Сообщения',
-			'path' => '/route/Posts/'
-		];
 		foreach ($this->menu as $key) {
 			if (!$this->success) {
 				$path = '/route/Authorization/';

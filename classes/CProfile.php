@@ -1,5 +1,5 @@
 <?php
-class Profile
+class CProfile
 {
 	private $login = '';
 	private $name = '';
@@ -32,10 +32,10 @@ class Profile
 		$this->checkReceiveEmail = (boolval($this->receiveEmail) ? 'checked' : '');
 	}
 
-	public function RenderProfileInfo()
+	public function GetObject()
 	{
 		$this->GetDataByUser();
-		return [
+		return
 			(new DivElement(''))
 				->addElement(new PElement('', 'Login: ' . $this->login))
 				->addElement(new PElement('', 'Name: ' . $this->name))
@@ -44,7 +44,6 @@ class Profile
 				->addElement(new PElement('', $this->strGroup))
 				->addElement(new PElement('', '<br><br>'))
 				->addElement(new CheckBoxElement('', '', '', true, $this->checkActivity, 'Activity: '))
-				->addElement(new CheckBoxElement('', '', '', true, $this->checkReceiveEmail, 'Consent to receive email notifications: '))
-		];
+				->addElement(new CheckBoxElement('', '', '', true, $this->checkReceiveEmail, 'Consent to receive email notifications: '));
 	}
 }

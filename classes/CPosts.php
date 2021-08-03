@@ -1,5 +1,6 @@
 <?php
-class PrintAllPostsInMainMenu
+
+class CPosts
 {
     private $id;
     private $text;
@@ -7,24 +8,23 @@ class PrintAllPostsInMainMenu
     private $title;
     private $date;
 
-
-    public function GetContent()
+    public function GetObject()
     {
         $FlexBlockForPosts = new DivElement('blog');
         foreach ((new DataBaseManager())->getAll("blog.blog") as $row) {
-            $this->id = $row["id"];
-            $this->title = $row["title"];
-            $this->image = $row["image"];
-            $this->text = $row["text"];
-            $this->date = substr($row["date_time"], 0, -9);
-
-            $FlexBlockForPosts->addElement($this->AddPostInContent());
+            $FlexBlockForPosts->addElement($this->AddPostInObject($row));
         }
-        return [$FlexBlockForPosts];
+        return $FlexBlockForPosts;
     }
 
-    private function AddPostInContent()
+    private function AddPostInObject($row)
     {
+        $this->id = $row["id"];
+        $this->title = $row["title"];
+        $this->image = $row["image"];
+        $this->text = $row["text"];
+        $this->date = substr($row["date_time"], 0, -9);
+
         return (new DivElement('block'))
             ->addElement(
                 (new DivElement('image'))
@@ -38,7 +38,7 @@ class PrintAllPostsInMainMenu
                             ->addElement(new PElement('content-data', $this->date))
                     )
                     ->addElement(new PElement('content-text', $this->text))
-                    ->addElement(new AElement('Blog-link', "/route/Posts/write/posts.php?Page=$this->id", 'Подробнее'))
+                    ->addElement(new AElement('Blog-link', "/Posts?Page=$this->id", 'Подробнее'))
             );
     }
 }
